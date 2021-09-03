@@ -53,11 +53,37 @@ img{
 .ad_pnl{
     display:flex;
     min-height: 100vh;
+    position:relative;
 }
 .inf{
     background-color:#000;
     width: 50%;
+    position: relative;
     padding:4rem 5rem 0 5rem;
+}
+.bck_off_101{
+    position:absolute;
+    width:100%;
+    z-index: 2;
+    min-height:100%;
+    background-color: rgba(0,0,0,.7);
+    left:0;
+    top:0;
+    display: none;
+}
+.typ_off_100{
+    border:1px solid;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    padding:.5rem;
+    width:0rem;
+    height:0rem;
+    background-color:#fff;
+    color:#000;
+    transition:all .5s;
+    opacity: 0;
 }
 .br_shp_13{
     display: flex;
@@ -68,13 +94,11 @@ img{
 .stmt_pic_11{
     overflow:hidden;
     border-radius:50%;
-    width:13rem;
-    height:13rem;
+    width: 13rem;
+    height: 13rem;
+    border:1px solid;
 }
-.stmt_pic_11 img{
-    width:100%;
-    height:100%;
-}
+
 .stmt_10{
     justify-content: space-around;
     display:flex;
