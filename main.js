@@ -34,3 +34,25 @@ typOff100.querySelector(".cl").addEventListener("click",function(){
 function changeInformation(inf,index){
     return inf[index];
 }
+const stuff = document.querySelector(".br_shp_20");
+const tabs = stuff.querySelectorAll("[data-target='tab']");
+const siblings = Array.prototype.slice.call(tabs);
+const context = stuff.querySelectorAll("[data-target='tab-context']");
+const contextSiblings = Array.prototype.slice.call(context);
+tabs.forEach((tab,index) => {
+    tab.addEventListener("click",(e)=>{
+        e.preventDefault();
+        replace(tab,siblings,context,contextSiblings,index);
+    })
+})
+
+function replace(tab,siblings,context,contextSiblings,index){
+    for(let i=0, j=0; i<siblings.length, j<contextSiblings.length; i++, j++){
+        if(siblings[i] != tab && siblings[i].classList.contains("active") && contextSiblings[j] != context[index] && contextSiblings[j].classList.contains("active")){
+            siblings[i].classList.remove("active");
+            contextSiblings[j].classList.remove("active");
+            tab.classList.add("active");
+            context[index].classList.add("active");
+        }
+    }
+}
