@@ -39,6 +39,8 @@ const tabs = stuff.querySelectorAll("[data-target='tab']");
 const siblings = Array.prototype.slice.call(tabs);
 const context = stuff.querySelectorAll("[data-target='tab-context']");
 const contextSiblings = Array.prototype.slice.call(context);
+tabs[0].classList.add("active");
+context[0].classList.add("active")
 tabs.forEach((tab,index) => {
     tab.addEventListener("click",(e)=>{
         e.preventDefault();

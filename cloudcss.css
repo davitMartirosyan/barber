@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Asap:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Asap:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+@font-face {
+    font-family: syfalen;
+    src: url("../font/syfalen.ttf");
+}
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
     color:#fff;
+    font-family: syfalen;
 }
 body{
     position: relative;
+    background-color:rgb(41, 41, 41);
 }
 ul{
     list-style: none;
@@ -26,7 +32,7 @@ a{
     padding:.5rem;
     min-width:3rem;
     min-height:3rem;
-    background-color:#000;
+    background-color:rgb(41, 41, 41);
     color:#fff;
     border:0;
     cursor:pointer;
@@ -35,15 +41,18 @@ a{
 }
 .btn.btn-crl{
     border-radius:50%;
-
+}
+.btn.border{
+    color:#fff;
+    border:1px solid #fff;
 }
 .btn:hover{
-    border:1px solid #000;
+    border:1px solid rgb(41, 41, 41);
     background-color:#fff;
-    color:#000;
+    color:#ff0505b2;
 }
 .btn:hover i{
-    color:#000;
+    color:#ff0505b2;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: Arvo;;
@@ -62,10 +71,10 @@ img{
     position:relative;
 }
 .inf{
-    background-color:#000;
+    background-color:rgb(41, 41, 41);
     width: 50%;
     position: relative;
-    padding:4rem 5rem 0 5rem;
+    padding:4rem 5rem .8rem 5rem;
 }
 .bck_off_101{
     position:fixed;
@@ -190,7 +199,7 @@ background-repeat: repeat-x;
 border-color: #ccc;
 }
 .br_shp_19 li a.active{
-    background: rgb(38, 187, 105);
+    background: #ff0505b2;
     box-shadow: inset 0 2px 4px rgb(0 0 0 / 15%);
     color:rgb(255, 255, 255);
 }
@@ -213,11 +222,13 @@ border-color: #ccc;
     justify-content: space-around;
     display:none;
 }
+.br_shp_15.sv{
+    justify-content: flex-start;
+    flex-direction: column;
+}
 .br_shp_15.active{
     display:flex;
 }
-
-
 .brb__15{
     width:9rem;
     display:flex;
@@ -240,8 +251,41 @@ border-color: #ccc;
     font-size: .9rem;
     color:#000;
 }
-
- 
+.serv_15{
+    padding-top:1.8rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.serv{
+    width:12rem;
+    text-align: center;
+    min-height:18rem;
+    padding:1.5rem;
+    border:1px solid #fff;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin:.1rem;
+    position: relative;
+}
+.serv_img{
+    width:8rem;
+    margin:.8rem 0 ;
+}
+.serv_img img{
+    filter:invert(100%);
+}
+.serv .delete{
+    position:absolute;
+    top:0;
+    right:0;
+    display:grid;
+    place-content: center;
+    min-width:2.2rem;
+    min-height: 2.2rem;;
+}
 
 
 
@@ -293,4 +337,6 @@ label input[type="file"]{
     top:40%;
     color:rgb(255, 255, 255);
     transform: translate(-50%);
+    background-color:rgb(41, 41, 41);
+    padding:.5rem;
 }
